@@ -1,0 +1,203 @@
+{
+  "success": true,
+  "message": "操作成功！",
+  "code": 200,
+  "result": {
+    "javaCodeParams": {
+      "businessPackage": "com.tievd.iot.mgt",
+      "entityPackage": "api",
+      "description": "产品分类表",
+      "entityName": "IotProductCategory"
+    },
+    "grouped": false,
+    "fieldList": [
+      {
+        "title": "产品分类Id",
+        "dataIndex": "id",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": false,
+        "showInForm": false,
+        "component": {
+          "name": "NUMBER",
+          "basicType": "Long",
+          "params": null
+        }
+      },
+      {
+        "title": "父产品分类Id",
+        "dataIndex": "parentId",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": true,
+        "showInForm": true,
+        "component": {
+          "name": "TREE_SELECT",
+          "basicType": "Long",
+          "params": {
+            "dictCode": "code,name"
+          }
+        }
+      },
+      {
+        "title": "产品分类编号",
+        "dataIndex": "code",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": true,
+        "showInForm": true,
+        "component": {
+          "name": "STRING",
+          "basicType": "String",
+          "params": null
+        }
+      },
+      {
+        "title": "产品分类名字",
+        "dataIndex": "name",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": true,
+        "showInForm": true,
+        "component": {
+          "name": "STRING",
+          "basicType": "String",
+          "params": null
+        }
+      },
+      {
+        "title": "物模型",
+        "dataIndex": "objectModelId",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": true,
+        "showInForm": true,
+        "component": {
+          "name": "SEARCH_SELECT_TAG",
+          "basicType": "Long",
+          "params": {
+            "dictCode": "code,name"
+          }
+        }
+      },
+      {
+        "title": "创建时间",
+        "dataIndex": "createTime",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": true,
+        "showInForm": false,
+        "component": {
+          "name": "DATE",
+          "basicType": "Date",
+          "params": null
+        }
+      },
+      {
+        "title": "修改时间",
+        "dataIndex": "updateTime",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": true,
+        "showInForm": false,
+        "component": {
+          "name": "DATE",
+          "basicType": "Date",
+          "params": null
+        }
+      },
+      {
+        "title": "创建用户",
+        "dataIndex": "createBy",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": false,
+        "showInForm": false,
+        "component": {
+          "name": "STRING",
+          "basicType": "String",
+          "params": null
+        }
+      },
+      {
+        "title": "修改用户",
+        "dataIndex": "updateBy",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": false,
+        "showInForm": false,
+        "component": {
+          "name": "STRING",
+          "basicType": "String",
+          "params": null
+        }
+      },
+      {
+        "title": "租户Id",
+        "dataIndex": "tenantId",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": false,
+        "showInForm": false,
+        "component": {
+          "name": "STRING",
+          "basicType": "String",
+          "params": null
+        }
+      },
+      {
+        "title": "是否删除",
+        "dataIndex": "delFlag",
+        "sort": 0,
+        "groupId": 0,
+        "showInList": false,
+        "showInForm": false,
+        "component": {
+          "name": "NUMBER",
+          "basicType": "Integer",
+          "params": null
+        }
+      }
+    ],
+    "tableQueryFieldList": [
+      {
+        "name": "name",
+        "label": "产品分类名字",
+        "component": {
+          "name": "STRING",
+          "basicType": null,
+          "params": null
+        },
+        "useFieldComponent": false
+      },
+      {
+        "name": "code",
+        "label": "产品分类编号",
+        "component": {
+          "name": "STRING",
+          "basicType": null,
+          "params": null
+        },
+        "useFieldComponent": false
+      },
+      {
+        "name": "createTime",
+        "label": "创建时间",
+        "component": {
+          "name": "DATE",
+          "basicType": null,
+          "params": null
+        },
+        "useFieldComponent": false
+      }
+    ],
+    "tableGroupList": [
+      {
+        "id": 0,
+        "name": "默认分组"
+      }
+    ],
+    "subTableList": []
+  },
+  "timestamp": 1627374864729
+}

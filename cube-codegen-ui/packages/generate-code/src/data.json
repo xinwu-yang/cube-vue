@@ -1,0 +1,257 @@
+{
+  "javaCodeParams": {
+    "businessPackage": "com.tievd.cube.codegen.dbsync",
+    "modulePackage": "test",
+    "entityPackage": "com.tievd.cube.codegen.dbsync.test.entity",
+    "description": "测试人员",
+    "entityName": "Tester"
+  },
+  "grouped": true,
+  "fieldList": [
+    {
+      "title": "主键",
+      "dataIndex": "id",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": true,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "NUMBER",
+        "basicType": "Long",
+        "params": null
+      }
+    },
+    {
+      "title": "真实姓名",
+      "dataIndex": "name",
+      "sort": 1,
+      "groupId": 1,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "STRING",
+        "basicType": "String",
+        "params": null
+      }
+    },
+    {
+      "title": "性别",
+      "dataIndex": "sex",
+      "sort": 2,
+      "groupId": 1,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "DICT_SELECT_TAG",
+        "basicType": "Integer",
+        "params": {
+          "dictCode": "sex"
+        }
+      }
+    },
+    {
+      "title": "管理的菜单",
+      "dataIndex": "permissionId",
+      "sort": 3,
+      "groupId": 2,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "TREE_SELECT",
+        "basicType": "String",
+        "params": {
+          "condition": "{\"del_flag\":\"0\"}",
+          "dictCode": "sys_permission,name,id",
+          "pidField": "parent_id"
+        }
+      }
+    },
+    {
+      "title": "角色",
+      "dataIndex": "role",
+      "sort": 4,
+      "groupId": 2,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "MULTI_SELECT_TAG",
+        "basicType": "String",
+        "params": {
+          "dictCode": "sys_role,role_name,id"
+        }
+      }
+    },
+    {
+      "title": "是否删除",
+      "dataIndex": "delFlag",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": false,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "NUMBER",
+        "basicType": "Integer",
+        "params": null
+      }
+    },
+    {
+      "title": "创建时间",
+      "dataIndex": "createTime",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": true,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "DATE",
+        "basicType": "Date",
+        "params": null
+      }
+    }
+  ],
+  "tableQueryFieldList": [
+    {
+      "name": "name",
+      "label": "姓名",
+      "component": {
+        "name": "STRING",
+        "basicType": null,
+        "params": null
+      },
+      "useFieldComponent": false
+    },
+    {
+      "name": "sex",
+      "label": "",
+      "component": {
+        "name": "STRING",
+        "basicType": null,
+        "params": null
+      },
+      "useFieldComponent": true
+    },
+    {
+      "name": "createTime",
+      "label": "",
+      "component": {
+        "name": "DATE",
+        "basicType": null,
+        "params": null
+      },
+      "useFieldComponent": false
+    }
+  ],
+  "tableGroupList": [
+    {
+      "id": 0,
+      "name": "默认分组"
+    },
+    {
+      "id": 1,
+      "name": "基础信息"
+    },
+    {
+      "id": 2,
+      "name": "权限信息"
+    }
+  ],
+  "subTableList": [
+    {
+      "entityName": "Device",
+      "entityPackage": "com.tievd.cube.codegen.dbsync.test.entity",
+      "description": "测试设备",
+      "foreignKey": "testerId",
+      "relationType": "ONE_TO_MANY",
+      "fieldList": [
+        {
+          "title": "主键",
+          "dataIndex": "id",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "NUMBER",
+            "basicType": "Long",
+            "params": null
+          }
+        },
+        {
+          "title": "设备名称",
+          "dataIndex": "name",
+          "sort": 1,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": true,
+          "require": true,
+          "component": {
+            "name": "STRING",
+            "basicType": "String",
+            "params": null
+          }
+        },
+        {
+          "title": "测试人",
+          "dataIndex": "testerId",
+          "sort": 1,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": true,
+          "require": true,
+          "component": {
+            "name": "NUMBER",
+            "basicType": "Long",
+            "params": null
+          }
+        },
+        {
+          "title": "是否删除",
+          "dataIndex": "delFlag",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": false,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "NUMBER",
+            "basicType": "Integer",
+            "params": null
+          }
+        },
+        {
+          "title": "创建时间",
+          "dataIndex": "createTime",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "DATE",
+            "basicType": "Date",
+            "params": null
+          }
+        }
+      ],
+      "tableQueryFieldList": [
+        {
+          "name": "name",
+          "label": "设备名称",
+          "component": {
+            "name": "STRING",
+            "basicType": null,
+            "params": null
+          },
+          "useFieldComponent": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+.j-super-query-box {
+  display: inline-block;
+
+  .j-super-query-modal {
+    .j-super-query-history-card {
+      /deep/ .ant-card-body,
+      /deep/ .ant-card-head-title {
+        padding: 0;
+      }
+
+      /deep/ .ant-card-head {
+        padding: 4px 8px;
+        min-height: initial;
+      }
+    }
+
+    .j-super-query-history-empty {
+      /deep/ .ant-empty-image {
+        height: 80px;
+        line-height: 80px;
+        margin-bottom: 0;
+      }
+
+      /deep/ img {
+        width: 80px;
+        height: 65px;
+      }
+
+      /deep/ .ant-empty-description {
+        color: @text-color-secondary;
+        margin: 8px 0;
+      }
+    }
+
+    .j-super-query-history-tree {
+      .j-history-tree-title {
+        width: calc(100% - 24px);
+        position: relative;
+        display: inline-block;
+
+        &-closer {
+          color: @text-color;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 24px;
+          height: 24px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity 0.3s, color 0.3s;
+
+          &:hover {
+            color: @tabs-hover-color;
+          }
+
+          &:active {
+            color: @tabs-active-color;
+          }
+        }
+
+        &:hover {
+          .j-history-tree-title-closer {
+            opacity: 1;
+          }
+        }
+      }
+
+      /deep/ .ant-tree-switcher {
+        display: none;
+      }
+
+      /deep/ .ant-tree-node-content-wrapper {
+        width: 100%;
+      }
+    }
+  }
+}

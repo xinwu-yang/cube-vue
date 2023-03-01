@@ -1,0 +1,97 @@
+/**
+ * author: lilinchang
+ * less函数生成flex相关常用类名
+ */
+.flex {
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.flex-shrink-0 {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+// 生成justify-content类 开始
+@justifyContentNameList: center, start, end, between, around, initial, inherit;
+@justifyContentList: center, flex-start, flex-end, space-between, space-around, initial, inherit;
+
+.justifyContent(@className, @value) {
+  .flex-@{className} {
+    -webkit-justify-content: @value;
+    justify-content: @value;
+  }
+}
+
+.loopJustifyContent(@i) when (@i < length(@justifyContentNameList) + 1 ) {
+  .justifyContent(extract(@justifyContentNameList, @i), extract(@justifyContentList, @i));
+  .loopJustifyContent(@i+1);
+}
+
+.loopJustifyContent(1);
+// 生成justify-content类 结束
+
+// 生成align-items，align-self类 开始
+@alignNameList: stretch, center, start, end, baseline, initial, inherit;
+@alignList: stretch, center, flex-start, flex-end, baseline, initial, inherit;
+
+.align(@className, @value) {
+  .flex-align-@{className} {
+    -webkit-align-items: @value;
+    align-items: @value;
+  }
+  .flex-self-@{className} {
+    align-self: @value;
+  }
+}
+
+.loopAlign(@i) when (@i < length(@alignNameList) + 1 ) {
+  .align(extract(@alignNameList, @i), extract(@alignList, @i));
+  .loopAlign(@i+1);
+}
+
+.loopAlign(1);
+// 生成align-items，align-self类 结束
+
+// 生成direction类 开始
+@directionNameList: row, row-reverse, column, column-reverse, direction-initial, direction-inherit;
+@directionList: row, row-reverse, column, column-reverse, initial, inherit;
+
+.direction(@className, @value) {
+  .flex-@{className} {
+    -webkit-flex-direction: @value;
+    flex-direction: @value;
+  }
+}
+
+.loopDirection(@i) when (@i < length(@directionNameList) + 1 ) {
+  .direction(extract(@directionNameList, @i), extract(@directionList, @i));
+  .loopDirection(@i+1);
+}
+
+.loopDirection(1);
+// 生成direction类 结束
+
+// 生成wrap类 开始
+@wrapNameList: nowrap, wrap, wrap-reverse, wrap-initial, wrap-inherit;
+@wrapList: nowrap, wrap, wrap-reverse, initial, inherit;
+
+.wrap(@className, @value) {
+  .flex-@{className} {
+    flex-wrap: @value;
+  }
+}
+
+.loopWrap(@i) when (@i < length(@wrapNameList) + 1 ) {
+  .wrap(extract(@wrapNameList, @i), extract(@wrapList, @i));
+  .loopWrap(@i+1);
+}
+
+.loopWrap(1);
+// 生成wrap类 开始

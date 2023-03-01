@@ -1,0 +1,94 @@
+.card-container {
+  background: @component-background;
+  overflow: hidden;
+  padding: 12px;
+  position: relative;
+  width: 100%;
+  .ant-tabs {
+    border: 1px solid @border-color-base;
+    padding: 0;
+    .ant-tabs-bar {
+      margin: 0;
+      outline: none;
+      border-bottom: none;
+      .ant-tabs-nav-container {
+        margin: 0;
+        .ant-tabs-tab {
+          padding: 0 24px !important;
+          background-color: @tabs-card-head-background !important;
+          margin-right: 0px !important;
+          border-radius: 0;
+          line-height: 38px;
+          border: 1px solid transparent !important;
+          border-bottom: 1px solid @border-color-base !important;
+        }
+        .ant-tabs-tab-active.ant-tabs-tab {
+          color: @primary-color;
+          background-color: @component-background !important;
+          border-right: 1px solid @border-color-base !important;
+          border-left: 1px solid @border-color-base !important;
+          border-bottom: 1px solid @border-color-base !important;
+          font-weight: normal;
+          transition: none !important;
+        }
+      }
+    }
+    .ant-tabs-tabpane {
+      padding: 15px;
+      .ant-row {
+        margin: 10px 0;
+      }
+      .ant-select,
+      .ant-input-number {
+        width: 100px;
+      }
+    }
+  }
+}
+.container-widthEn {
+  width: 755px;
+}
+.container-widthCn {
+  width: 608px;
+}
+.language {
+  text-align: center;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  border: 1px solid transparent;
+  height: 40px;
+  line-height: 38px;
+  font-size: 16px;
+  color: @primary-color;
+  z-index: 1;
+  background: @component-background;
+  outline: none;
+  width: 47px;
+  border-bottom: 1px solid @border-color-base;
+  border-radius: 0;
+}
+.card-container {
+  .bottom {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 0 0;
+    .cronButton {
+      margin: 0 10px;
+      line-height: 40px;
+    }
+  }
+}
+.tabBody {
+  .a-row {
+    margin: 10px 0;
+    .long {
+      .a-select {
+        width: 354px;
+      }
+    }
+    .a-input-number {
+      width: 110px;
+    }
+  }
+}

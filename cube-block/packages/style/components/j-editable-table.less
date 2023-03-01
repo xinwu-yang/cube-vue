@@ -1,0 +1,354 @@
+.action-button {
+  margin-bottom: 8px;
+
+  .gap {
+    padding-left: 8px;
+  }
+}
+
+/* 设定边框参数 */
+@borderColor: @border-color-base;
+@border: 1px solid @borderColor;
+/* tr & td 之间的间距 */
+@spacing: 8px;
+
+.input-table {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  border: @border;
+
+  .thead,
+  .tbody {
+    .tr,
+    .td {
+      display: flex;
+    }
+
+    .td {
+      /*border-right: 1px solid red;*/
+      /*color: white;*/
+      /*background-color: black;*/
+      /*margin-right: @spacing !important;*/
+
+      padding-left: @spacing;
+      flex-direction: column;
+
+      &.td-cb,
+      &.td-num {
+        width: 45px;
+        min-width: 45px;
+        max-width: 50px;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &.td-ds {
+        width: 30px;
+        min-width: 30px;
+        max-width: 35px;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: center;
+        align-items: center;
+
+        .td-ds-icons {
+          position: relative;
+          cursor: move;
+          width: 100%;
+          /*padding: 25% 0;*/
+          height: 100%;
+
+          .anticon-align-left,
+          .anticon-align-right {
+            position: absolute;
+            top: 30%;
+          }
+
+          .anticon-align-left {
+            left: 25%;
+          }
+
+          .anticon-align-right {
+            right: 25%;
+          }
+        }
+      }
+    }
+  }
+
+  .thead {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-bottom: @border;
+
+    /** 隐藏thead的滑块   */
+
+    &::-webkit-scrollbar-thumb {
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+
+    .tr {
+      min-width: 100%;
+      overflow-y: scroll;
+    }
+
+    .td {
+      /*flex: 1;*/
+      padding: 8px @spacing;
+      justify-content: center;
+    }
+  }
+
+  .tbody {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    min-height: 61px;
+    /*max-height: 400px;*/
+    min-width: 100%;
+
+    .tr-nodata {
+      color: @text-color-secondary;
+      line-height: 61px;
+      text-align: center;
+    }
+
+    .tr {
+      /*line-height: 50px;*/
+
+      border-bottom: @border;
+      transition: background-color 300ms;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      z-index: 10;
+
+      &.tr-checked {
+        background-color: @item-active-bg;
+      }
+
+      &:hover {
+        background-color: @item-hover-bg;
+      }
+    }
+
+    .tr-expand {
+      position: relative;
+      z-index: 9;
+      background-color: @component-background;
+    }
+
+    .td {
+      /*flex: 1;*/
+      background-color: transparent;
+      padding: 14px @spacing 14px 0;
+      justify-content: center;
+
+      &:last-child {
+        padding-right: @spacing;
+      }
+
+      .j-editable-table-input {
+        font-variant: tabular-nums;
+        box-sizing: border-box;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        display: inline-block;
+        padding: 4px 11px;
+        width: 100%;
+        height: 32px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: @text-color;
+        background-color: @component-background;
+        border: 1px solid @border-color-base;
+        border-radius: 4px;
+        transition: all 0.3s;
+        outline: none;
+
+        &:hover {
+          border-color: @primary-color;
+        }
+
+        &:focus {
+          border-color: @primary-color !important;
+          box-shadow: 0 0 0 2px fade(@primary-color, 25%);
+          border-right-width: 1px !important;
+        }
+
+        &:disabled {
+          color: @disabled-color;
+          background: @disabled-bg;
+          cursor: not-allowed;
+        }
+
+        /* 设置placeholder的颜色 */
+
+        &::-webkit-input-placeholder {
+          /* WebKit browsers */
+          color: @input-placeholder-color;
+        }
+
+        &:-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+          color: @input-placeholder-color;
+        }
+
+        &::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+          color: @input-placeholder-color;
+        }
+
+        &:-ms-input-placeholder {
+          /* Internet Explorer 10+ */
+          color: @input-placeholder-color;
+        }
+      }
+
+      .j-editable-image {
+        height: 32px;
+        max-width: 100px !important;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:active {
+          opacity: 0.6;
+        }
+      }
+
+      /* --------------------------- 2020年5月18日 begin 默认span模式 ------------------------------ */
+
+      label {
+        height: 32px;
+
+        &.ant-checkbox-wrapper {
+          height: auto;
+        }
+      }
+
+      .j-td-span {
+        position: relative;
+        padding: 4px 11px;
+        border: 1px solid transparent;
+        display: inline-block;
+        width: 100%;
+        max-width: 100%;
+        height: 32px;
+        cursor: text;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 1.5;
+        color: @text-color;
+        border-radius: 4px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &:hover {
+          background-color: white;
+        }
+
+        &.disabled {
+          cursor: not-allowed;
+
+          &:hover {
+            color: @text-color;
+            background-color: @item-hover-bg;
+          }
+        }
+      }
+
+      /* --------------------------- 2020年5月18日 end 默认span模式 ------------------------------ */
+
+      /* --------------------------- 2020年5月28日 begin 新增校验未通过的样式 ------------------------------ */
+
+      .j-check-failed.j-td-span {
+        background-color: @component-background;
+
+        &:hover {
+          background-color: @item-hover-bg;
+        }
+      }
+
+      .j-check-failed.j-td-span,
+      input.j-check-failed,
+      .j-check-failed /deep/ input,
+      .ant-select.j-check-failed /deep/ .ant-select-selection,
+      .ant-upload.j-check-failed /deep/ .ant-btn {
+        border-color: @highlight-color;
+        box-shadow: 0 0 0 2px @box-shadow-base;
+      }
+
+      /* --------------------------- 2020年5月28日 end 新增校验未通过的样式 ------------------------------ */
+    }
+  }
+
+  .scroll-view {
+    overflow: auto;
+    overflow-y: scroll;
+  }
+
+  .thead,
+  .thead .tr,
+  .scroll-view {
+    @scrollBarSize: 6px;
+    /* 定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+    &::-webkit-scrollbar {
+      width: @scrollBarSize;
+      height: @scrollBarSize;
+      background-color: transparent;
+    }
+
+    /* 定义滚动条轨道 */
+
+    &::-webkit-scrollbar-track {
+      background-color: @component-background;
+    }
+
+    /* 定义滑块 */
+
+    &::-webkit-scrollbar-thumb {
+      background-color: fade(@component-background, 50%);
+      box-shadow: inset 0 0 6px @box-shadow-base;
+
+      &:hover {
+        background-color: @item-hover-bg;
+      }
+
+      &:active {
+        background-color: @item-active-bg;
+      }
+    }
+  }
+
+  .thead .tr {
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    /* IE模式下隐藏 */
+    -ms-overflow-style: none;
+    -ms-scroll-chaining: chained;
+    -ms-content-zooming: zoom;
+    -ms-scroll-rails: none;
+    -ms-content-zoom-limit-min: 100%;
+    -ms-content-zoom-limit-max: 500%;
+    -ms-scroll-snap-type: proximity;
+    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+  }
+}

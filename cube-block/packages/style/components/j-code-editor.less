@@ -1,0 +1,109 @@
+.code-editor-cust {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  height: 100%;
+  .CodeMirror {
+    flex-grow: 1;
+    z-index: 1;
+    .CodeMirror-code {
+      line-height: 19px;
+    }
+  }
+  .code-mode-select {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 10px;
+    max-width: 130px;
+  }
+  .CodeMirror {
+    height: auto;
+    min-height: 100%;
+  }
+  .null-tip {
+    position: absolute;
+    top: 4px;
+    left: 36px;
+    z-index: 10;
+    color: @text-color-secondary;
+    line-height: initial;
+  }
+  .null-tip-hidden {
+    display: none;
+  }
+}
+
+/* 全屏样式 */
+.full-screen-parent {
+  position: relative;
+
+  .full-screen-icon {
+    opacity: 0;
+    color: @icon-color;
+    width: 20px;
+    height: 20px;
+    line-height: 24px;
+    background-color: @component-background;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    .full-screen-icon {
+      opacity: 1;
+
+      &:hover {
+        background-color: @item-hover-bg;
+      }
+    }
+  }
+
+  &.full-screen {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px;
+    background-color: @component-background;
+
+    .full-screen-icon {
+      top: 12px;
+      right: 12px;
+    }
+
+    .full-screen-child {
+      height: 100%;
+      max-height: 100%;
+      min-height: 100%;
+    }
+  }
+
+  .full-screen-child {
+    height: 100%;
+  }
+
+  &.auto-height {
+    .full-screen-child {
+      min-height: 120px;
+      max-height: 320px;
+      height: unset;
+      overflow: hidden;
+    }
+
+    &.full-screen .full-screen-child {
+      height: 100%;
+      max-height: 100%;
+      min-height: 100%;
+    }
+  }
+}
+
+.CodeMirror-cursor {
+  height: 18.4px !important;
+}

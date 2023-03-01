@@ -1,0 +1,4 @@
+{
+  "generate-code": "./packages/generate-code/index.js",
+  "column-filter": "./packages/column-filter/index.js"
+}

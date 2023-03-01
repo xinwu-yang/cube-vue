@@ -1,0 +1,34 @@
+.DS_Store
+node_modules
+/packages
+/examples
+/public
+/src
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+package-lock.json
+yarn.lock
+components.json
+*.map
+.babelrc
+.eslintignore
+.gitattributes
+.gitignore
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

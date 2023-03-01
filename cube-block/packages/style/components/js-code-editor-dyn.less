@@ -1,0 +1,57 @@
+.jeecg-editor-ty {
+  position: relative;
+
+  .full-screen-icon {
+    opacity: 0;
+    color: @icon-color;
+    width: 20px;
+    height: 20px;
+    line-height: 24px;
+    background-color: @component-background;
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  &:hover {
+    .full-screen-icon {
+      opacity: 1;
+
+      &:hover {
+        background-color: @item-hover-bg;
+      }
+    }
+  }
+
+  .null-tip {
+    position: absolute;
+    top: 4px;
+    left: 36px;
+    z-index: 10;
+    font-size: 16px;
+    color: @text-color-secondary;
+    line-height: initial;
+  }
+  .null-tip-hidden {
+    display: none;
+  }
+}
+.jeecg-editor-max {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  height: 100%;
+  width: 100% !important;
+
+  .CodeMirror {
+    position: inherit !important;
+    width: 100%;
+    height: 100%;
+  }
+  .full-screen-icon {
+    z-index: 9999;
+  }
+}

@@ -1,0 +1,72 @@
+// 亮色皮肤主题
+@import '~ant-design-vue/lib/style/themes/default.less';
+@import './ui.less';
+
+@theme: light;
+
+// 基础颜色
+@primary-color: #2e5ee2; // 全局主色
+@success-color: #52c41a; // 成功色
+@warning-color: #ffbf00; // 警告色
+@error-color: #ff3b30; // 错误色
+@accent-color: #ff6010; // 强调色
+@disabled-color: #ccc; // 失效色
+
+@white: #fff;
+@black: #000;
+
+// 文本
+@text-color: #4c4c4c; // 主文本色
+@text-color-secondary: #707070; // 次文本色
+@font-size-base: 14px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-sm: 12px;
+@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+// 组件
+@body-background: #fff; // body背景色
+@component-background: #fff; // 组件背景色
+@background-color-selected: hsv(0, 0, 98%); // 选中项背景色
+@background-color-base: hsv(0, 0, 96%); // 默认灰阶背景色
+@item-active-bg: rgba(46, 94, 226, 0.1); // 选中项背景
+@item-hover-bg: rgba(46, 94, 226, 0.1); // hover项背景
+@disabled-bg: #eee; // 失效背景
+
+// layout
+@layout-header-height: 56px; // 头部高
+@layout-header-background: @primary-color; // 头部背景
+@layout-header-color: #fff; // 头部字色
+@layout-body-background: #f0f2f5; // 主背景
+@layout-footer-background: transparent; // footer 背景
+@layout-sider-background: @component-background; // 左侧背景
+@layout-sider-width: 208px; // 左侧宽度
+@layout-sider-collapsed-width: 80px; // 左侧折叠宽度
+@layout-logo-background: @layout-header-background; // logo背景色
+@layout-logo-color: @layout-header-color; // logo文字颜色
+@layout-logo-color-hover: fade(@layout-logo-color, 80%); // logo文字hover时的颜色
+@layout-tab-background: @component-background; // TabLayout 背景色
+
+// 菜单
+@menu-bg: @component-background; // 菜单背景色
+@menu-item-active-bg: @item-active-bg; // 菜单选中背景色
+@menu-item-color: @text-color; // 菜单字体的颜色
+@menu-highlight-color: @primary-color; // 选中或hover的字体颜色
+
+// 链接
+@link-color: @primary-color;
+@link-hover-color: color(~`colorPalette('@{link-color}', 5) `);
+@link-active-color: color(~`colorPalette('@{link-color}', 7) `);
+
+// 阴影
+@box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); // 浮层阴影
+@shadow-1-down: 0 6px 16px -8px rgba(0, 0, 0, 0.32), 0 9px 28px 0 rgba(0, 0, 0, 0.2), 0 12px 48px 16px rgba(0, 0, 0, 0.12);
+
+// border
+@border-radius-base: 4px; // 圆角
+@border-color-base: #d9d9d9; // 边框色
+
+// time-picker
+@time-picker-selected-bg: @primary-color; // 选中项背景色
+
+// calendar
+@primary-2: @primary-color; // 选中项背景色

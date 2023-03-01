@@ -1,0 +1,305 @@
+{
+    "grouped": true,
+    "tableGroupList": [
+        {
+            "name": "默认分组",
+            "id": 0
+        },
+        {
+            "name": "基础信息",
+            "id": 1
+        },
+        {
+            "name": "权限信息",
+            "id": 2
+        }
+    ],
+    "javaCodeParams": {
+        "description": "测试人员",
+        "businessPackage": "com.tievd.cube.codegenerator",
+        "modulePackage": "test",
+        "entityPackage": "test",
+        "entityName": "Tester"
+    },
+    "subTableList": [
+        {
+            "relationType": "ONE_TO_MANY",
+            "description": "测试设备",
+            "entityName": "Device",
+            "tableQueryFieldList": [
+                {
+                    "label": "设备名称",
+                    "component": {
+                        "params": null,
+                        "name": "STRING"
+                    },
+                    "useFieldComponent": false,
+                    "name": "name"
+                }
+            ],
+            "foreignKey": "testerId",
+            "fieldList": [
+                {
+                    "groupId": 0,
+                    "sort": 0,
+                    "title": "主键",
+                    "showInForm": false,
+                    "component": {
+                        "params": null,
+                        "name": "NUMBER"
+                    },
+                    "dataIndex": "id",
+                    "showInList": true
+                },
+                {
+                    "groupId": 0,
+                    "sort": 1,
+                    "title": "设备名称",
+                    "showInForm": true,
+                    "component": {
+                        "params": null,
+                        "name": "STRING"
+                    },
+                    "dataIndex": "name",
+                    "showInList": true
+                },
+                {
+                    "groupId": 0,
+                    "sort": 1,
+                    "title": "测试人",
+                    "showInForm": true,
+                    "component": {
+                        "params": null,
+                        "name": "NUMBER"
+                    },
+                    "dataIndex": "testerId",
+                    "showInList": true
+                },
+                {
+                    "groupId": 0,
+                    "sort": 0,
+                    "title": "是否删除",
+                    "showInForm": false,
+                    "component": {
+                        "params": null,
+                        "name": "NUMBER"
+                    },
+                    "dataIndex": "delFlag",
+                    "showInList": false
+                },
+                {
+                    "groupId": 0,
+                    "sort": 0,
+                    "title": "创建时间",
+                    "showInForm": false,
+                    "component": {
+                        "params": null,
+                        "name": "DATE"
+                    },
+                    "dataIndex": "createTime",
+                    "showInList": true
+                }
+            ]
+        },
+        {
+            "relationType": "ONE_TO_ONE",
+            "description": "测试一对一",
+            "entityName": "DeviceOneToOne",
+            "tableQueryFieldList": [
+                {
+                    "label": "设备名称",
+                    "component": {
+                        "params": null,
+                        "name": "STRING"
+                    },
+                    "useFieldComponent": false,
+                    "name": "name"
+                }
+            ],
+            "foreignKey": "testerId",
+            "fieldList": [
+                {
+                    "groupId": 0,
+                    "sort": 0,
+                    "title": "主键",
+                    "showInForm": false,
+                    "component": {
+                        "params": null,
+                        "name": "NUMBER"
+                    },
+                    "dataIndex": "id",
+                    "showInList": true
+                },
+                {
+                    "groupId": 0,
+                    "sort": 1,
+                    "title": "banana名称",
+                    "showInForm": true,
+                    "component": {
+                        "params": null,
+                        "name": "STRING"
+                    },
+                    "dataIndex": "name",
+                    "showInList": true
+                },
+                {
+                    "groupId": 0,
+                    "sort": 1,
+                    "title": "测试人",
+                    "showInForm": true,
+                    "component": {
+                        "params": null,
+                        "name": "NUMBER"
+                    },
+                    "dataIndex": "testerId",
+                    "showInList": true
+                },
+                {
+                    "groupId": 0,
+                    "sort": 0,
+                    "title": "是否删除",
+                    "showInForm": false,
+                    "component": {
+                        "params": null,
+                        "name": "NUMBER"
+                    },
+                    "dataIndex": "delFlag",
+                    "showInList": false
+                },
+                {
+                    "groupId": 0,
+                    "sort": 0,
+                    "title": "创建时间",
+                    "showInForm": false,
+                    "component": {
+                        "params": null,
+                        "name": "DATE"
+                    },
+                    "dataIndex": "createTime",
+                    "showInList": true
+                }
+            ]
+        }
+    ],
+    "tableQueryFieldList": [
+        {
+            "label": "姓名",
+            "component": {
+                "params": null,
+                "name": "STRING"
+            },
+            "useFieldComponent": false,
+            "name": "name"
+        },
+        {
+            "label": "",
+            "component": {
+                "params": null,
+                "name": "STRING"
+            },
+            "useFieldComponent": true,
+            "name": "sex"
+        },
+        {
+            "label": "",
+            "component": {
+                "params": null,
+                "name": "DATE"
+            },
+            "useFieldComponent": false,
+            "name": "createTime"
+        }
+    ],
+    "fieldList": [
+        {
+            "groupId": 0,
+            "sort": 0,
+            "title": "主键",
+            "showInForm": false,
+            "component": {
+                "params": null,
+                "name": "NUMBER"
+            },
+            "dataIndex": "id",
+            "showInList": true
+        },
+        {
+            "groupId": 1,
+            "sort": 1,
+            "title": "真实姓名",
+            "showInForm": true,
+            "component": {
+                "params": null,
+                "name": "STRING"
+            },
+            "dataIndex": "name",
+            "showInList": true
+        },
+        {
+            "groupId": 1,
+            "sort": 2,
+            "title": "性别",
+            "showInForm": true,
+            "component": {
+                "params": {
+                    "dictCode": "sex"
+                },
+                "name": "DICT_SELECT_TAG"
+            },
+            "dataIndex": "sex",
+            "showInList": true
+        },
+        {
+            "groupId": 2,
+            "sort": 3,
+            "title": "管理的菜单",
+            "showInForm": true,
+            "component": {
+                "params": {
+                    "dictCode": "sys_permission,name,id"
+                },
+                "name": "SEARCH_SELECT_TAG"
+            },
+            "dataIndex": "permissionId",
+            "showInList": true
+        },
+        {
+            "groupId": 2,
+            "sort": 4,
+            "title": "角色",
+            "showInForm": true,
+            "component": {
+                "params": {
+                    "dictCode": "sys_role,role_name,id"
+                },
+                "name": "MULTI_SELECT_TAG"
+            },
+            "dataIndex": "role",
+            "showInList": true
+        },
+        {
+            "groupId": 0,
+            "sort": 0,
+            "title": "是否删除",
+            "showInForm": false,
+            "component": {
+                "params": null,
+                "name": "NUMBER"
+            },
+            "dataIndex": "delFlag",
+            "showInList": false
+        },
+        {
+            "groupId": 0,
+            "sort": 0,
+            "title": "创建时间",
+            "showInForm": false,
+            "component": {
+                "params": null,
+                "name": "DATE"
+            },
+            "dataIndex": "createTime",
+            "showInList": true
+        }
+    ]
+}

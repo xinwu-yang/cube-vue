@@ -1,0 +1,31 @@
+{
+  "name": "@tievd/cube-skin",
+  "author": "lilinchang",
+  "version": "0.0.4",
+  "description": "天翼魔方平台皮肤",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "pub": "sh publish.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://125.71.201.11:9004/cube/cube-skin.git"
+  },
+  "homepage": "http://125.71.201.11:9004",
+  "keywords": [
+    "tievd",
+    "cube",
+    "skin",
+    "cube-skin"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "http://125.71.201.11:9004/cube/cube-skin/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "select-version-cli": "^0.0.2"
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "javaCodeParams": {
+    "businessPackage": "com.tievd.cube",
+    "modulePackage": "demo",
+    "entityPackage": "com.tievd.cube.demo.entity",
+    "description": "周报",
+    "entityName": "WeekReport"
+  },
+  "grouped": true,
+  "fieldList": [
+    {
+      "title": "id",
+      "dataIndex": "id",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": false,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "NUMBER",
+        "basicType": "Long",
+        "params": null
+      }
+    },
+    {
+      "title": "标题",
+      "dataIndex": "title",
+      "sort": 0,
+      "groupId": 1,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "STRING",
+        "basicType": "String",
+        "params": null
+      }
+    },
+    {
+      "title": "简单描述",
+      "dataIndex": "description",
+      "sort": 0,
+      "groupId": 1,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "EDITOR",
+        "basicType": "String",
+        "params": null
+      }
+    },
+    {
+      "title": "所属部门",
+      "dataIndex": "departId",
+      "sort": 0,
+      "groupId": 1,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "SELECT_DEPART",
+        "basicType": "String",
+        "params": null
+      }
+    },
+    {
+      "title": "封面",
+      "dataIndex": "cover",
+      "sort": 0,
+      "groupId": 2,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "IMAGE_UPLOAD",
+        "basicType": "String",
+        "params": {
+          "fileLimit": "8192"
+        }
+      }
+    },
+    {
+      "title": "周开始",
+      "dataIndex": "weekBegin",
+      "sort": 0,
+      "groupId": 2,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "DATE",
+        "basicType": "Date",
+        "params": null
+      }
+    },
+    {
+      "title": "周结束",
+      "dataIndex": "weekEnd",
+      "sort": 0,
+      "groupId": 2,
+      "showInList": true,
+      "showInForm": true,
+      "require": true,
+      "component": {
+        "name": "DATE",
+        "basicType": "Date",
+        "params": null
+      }
+    },
+    {
+      "title": "delFlag",
+      "dataIndex": "delFlag",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": false,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "ENUM_SELECT",
+        "basicType": "String",
+        "params": {
+          "classPath": "com.tievd.cube.common.enums.DelFlag"
+        }
+      }
+    },
+    {
+      "title": "创建时间",
+      "dataIndex": "createTime",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": true,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "DATE",
+        "basicType": "Date",
+        "params": null
+      }
+    },
+    {
+      "title": "创建人",
+      "dataIndex": "createBy",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": true,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "STRING",
+        "basicType": "String",
+        "params": null
+      }
+    },
+    {
+      "title": "更新时间",
+      "dataIndex": "updateTime",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": true,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "DATE",
+        "basicType": "Date",
+        "params": null
+      }
+    },
+    {
+      "title": "更新人",
+      "dataIndex": "updateBy",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": true,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "STRING",
+        "basicType": "String",
+        "params": null
+      }
+    },
+    {
+      "title": "部门编码",
+      "dataIndex": "sysOrgCode",
+      "sort": 0,
+      "groupId": 0,
+      "showInList": false,
+      "showInForm": false,
+      "require": true,
+      "component": {
+        "name": "STRING",
+        "basicType": "String",
+        "params": null
+      }
+    }
+  ],
+  "tableQueryFieldList": [
+    {
+      "name": "id",
+      "label": "标题",
+      "component": {
+        "name": "SEARCH_SELECT_TAG",
+        "basicType": null,
+        "params": {
+          "dictCode": "week_report,title,id"
+        }
+      },
+      "useFieldComponent": false
+    }
+  ],
+  "tableGroupList": [
+    {
+      "id": 0,
+      "name": "默认分组"
+    },
+    {
+      "id": 1,
+      "name": "基础信息"
+    },
+    {
+      "id": 2,
+      "name": "周报信息"
+    }
+  ],
+  "subTableList": [
+    {
+      "entityName": "WeekPlan",
+      "entityPackage": "com.tievd.cube.demo.entity",
+      "description": "计划项",
+      "foreignKey": "weekReportId",
+      "relationType": "ONE_TO_MANY",
+      "fieldList": [
+        {
+          "title": "id",
+          "dataIndex": "id",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": false,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "STRING",
+            "basicType": "String",
+            "params": null
+          }
+        },
+        {
+          "title": "标题",
+          "dataIndex": "title",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": true,
+          "require": true,
+          "component": {
+            "name": "STRING",
+            "basicType": "String",
+            "params": null
+          }
+        },
+        {
+          "title": "简单描述",
+          "dataIndex": "description",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": true,
+          "require": true,
+          "component": {
+            "name": "EDITOR",
+            "basicType": "String",
+            "params": null
+          }
+        },
+        {
+          "title": "计划类型",
+          "dataIndex": "type",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": true,
+          "require": true,
+          "component": {
+            "name": "DICT_SELECT_TAG",
+            "basicType": "String",
+            "params": {
+              "dictCode": "week_plan_type"
+            }
+          }
+        },
+        {
+          "title": "所属周报",
+          "dataIndex": "weekReportId",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": false,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "NUMBER",
+            "basicType": "Long",
+            "params": null
+          }
+        },
+        {
+          "title": "delFlag",
+          "dataIndex": "delFlag",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": false,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "ENUM_SELECT",
+            "basicType": "String",
+            "params": {
+              "classPath": "com.tievd.cube.common.enums.DelFlag"
+            }
+          }
+        },
+        {
+          "title": "创建时间",
+          "dataIndex": "createTime",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "DATE",
+            "basicType": "Date",
+            "params": null
+          }
+        },
+        {
+          "title": "创建人",
+          "dataIndex": "createBy",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "STRING",
+            "basicType": "String",
+            "params": null
+          }
+        },
+        {
+          "title": "更新时间",
+          "dataIndex": "updateTime",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "DATE",
+            "basicType": "Date",
+            "params": null
+          }
+        },
+        {
+          "title": "更新人",
+          "dataIndex": "updateBy",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": true,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "STRING",
+            "basicType": "String",
+            "params": null
+          }
+        },
+        {
+          "title": "部门编码",
+          "dataIndex": "sysOrgCode",
+          "sort": 0,
+          "groupId": 0,
+          "showInList": false,
+          "showInForm": false,
+          "require": true,
+          "component": {
+            "name": "STRING",
+            "basicType": "String",
+            "params": null
+          }
+        }
+      ],
+      "tableQueryFieldList": []
+    }
+  ]
+}
