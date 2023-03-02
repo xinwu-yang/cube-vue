@@ -6,6 +6,12 @@ Cube Web 是基于 Ant Design Pro of Vue 开发的一个企业级中后台管理
 
 ### 版本: 3.0.x
 
+### 开发文档
+
+- [后端开发文档](https://github.com/xinwu-yang/cube-java/wiki)
+
+- [前端开发文档](https://github.com/xinwu-yang/cube-vue/wiki)
+
 ### 项目结构说明
 
 ```text
