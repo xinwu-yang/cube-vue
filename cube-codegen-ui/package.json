@@ -1,8 +1,8 @@
 {
-  "name": "@tievd/cube-generate-code",
-  "author": "lilinchang",
-  "version": "0.2.3",
-  "description": "A Generate Code Component for Tievd Cube.代码生成器",
+  "name": "@cube/cube-generate-code",
+  "author": "杨欣武",
+  "version": "3.0.0",
+  "description": "魔方代码生成器",
   "main": "lib/cube-generate-code.common.js",
   "files": [
     "lib"
@@ -34,20 +34,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://125.71.201.11:9004/cube/cube-codegen-ui.git"
+    "url": "https://github.com/xinwu-yang/cube-vue.git"
   },
-  "homepage": "http://125.71.201.11:9004",
+  "homepage": "https://github.com/xinwu-yang/cube-vue/wiki",
   "keywords": [
-    "tievd",
     "cube",
     "vue",
     "components",
-    "generate-code",
-    "code"
+    "generate-code"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "http://125.71.201.11:9004/cube/cube-codegen-ui/issues"
+    "url": "https://github.com/xinwu-yang/cube-vue/issues"
   },
   "unpkg": "lib/index.js",
   "style": "lib/theme-chalk/index.css",

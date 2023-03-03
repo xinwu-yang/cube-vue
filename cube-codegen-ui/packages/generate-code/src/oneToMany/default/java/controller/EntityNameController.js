@@ -8,13 +8,16 @@ import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.tievd.cube.common.system.vo.LoginUser;
-import com.tievd.cube.commons.base.Result;
-import com.tievd.cube.commons.easyexcel.EasyExcel;
-import com.tievd.cube.commons.easyexcel.dict.IDictTranslator;
-import com.tievd.cube.commons.easyexcel.model.ImportExcel;
-import com.tievd.cube.commons.utils.http.HttpHeaderUtils;
-import com.tievd.cube.common.system.query.QueryGenerator;-%>
+import org.cube.modules.system.model.LoginUser;
+import org.cube.plugin.easyexcel.EasyExcel;
+import org.cube.plugin.easyexcel.dict.IDictTranslator;
+import org.cube.plugin.easyexcel.model.ImportExcel;
+import org.cube.commons.base.Result;
+import org.cube.commons.utils.web.HttpServletUtil;
+import org.cube.commons.mybatisplus.QueryGenerator;-%>
+import org.cube.commons.annotations.DictApi;
+import org.cube.commons.annotations.AutoLog;
+import org.cube.commons.system.api.ISysBaseAPI;
 <% for (let item of subTableList) { %>
 import <%= item.entityPackage %>.<%= item.entityName %>;-%>
 <% } %>
@@ -33,14 +36,11 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
-import com.tievd.cube.commons.annotations.DictApi;
-import com.tievd.cube.commons.annotations.AutoLog;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.collection.ListUtil;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.StrUtil;
 import cn.dev33.satoken.stp.StpUtil;
-import com.tievd.cube.common.system.api.ISysBaseAPI;
 
   /**
    * <%= description %>
@@ -191,7 +191,7 @@ public class <%= entityName %>Controller {
 
     // 导出文件名称
     String date = DateUtil.format(new Date(), "yyyyMMddHHmmss");
-    HttpHeaderUtils.addDownloadHeader(response, "<%= description %>数据-" + date + easyExcel.getExtension());
+    HttpServletUtil.addDownloadHeader(response, "<%= description %>数据-" + date + easyExcel.getExtension());
     easyExcel.export(pageList, response.getOutputStream(), dictTranslator);
   }
 

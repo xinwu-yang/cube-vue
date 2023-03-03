@@ -5,11 +5,11 @@ import java.util.List;-%>
 import <%= item.entityPackage %>.<%= item.entityName %>;-%>
 <% } %>
 import lombok.Data;
-import com.tievd.cube.commons.easyexcel.annotations.Excel;
+import org.cube.plugin.easyexcel.annotations.Excel;
+import org.cube.commons.annotations.Dict;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
-import com.tievd.cube.commons.annotations.Dict;
 
 /**
  * <%= description %>
