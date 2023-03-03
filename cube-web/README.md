@@ -1,6 +1,6 @@
 # 魔方快速开发平台-前端框架
 
-版本：2.5.x
+版本：3.0.x
 
 ### 前端技术栈
 
@@ -20,12 +20,6 @@
 - [报表 viser-vue](https://viserjs.github.io/demo.html#/viser/bar/basic-bar)
 
 ### 快速开始
-
-- 拉取项目代码
-
-```bash
-git clone http://125.71.201.11:9004/cube/cube-web.git -b 2.5.x
-```
 
 - 安装依赖
 
@@ -72,7 +66,7 @@ yarn lint
 ...
 less: {
   modifyVars: {
-    hack: `true; @import (reference) "~@tievd/cube-skin/lib/light.less";` // 或者其他你想使用的皮肤
+    hack: `true; @import (reference) "~@cube/cube-skin/lib/light.less";` // 或者其他你想使用的皮肤
   },
   javascriptEnabled: true
 }
@@ -83,7 +77,7 @@ less: {
 
 ```less
 // 第一步：创建自己的皮肤文件，例如 /src/assets/skin/my-skin.less
-@import "~@tievd/cube-skin/lib/light.less"; // light.less、dark.less 或者其他你想使用的皮肤
+@import "~@cube/cube-skin/lib/light.less"; // light.less、dark.less 或者其他你想使用的皮肤
 
 @primary-color: red;
 ...

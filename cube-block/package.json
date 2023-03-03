@@ -1,7 +1,7 @@
 {
-  "name": "@tievd/cube-block",
-  "author": "lilinchang",
-  "version": "2.4.7",
+  "name": "@cube/cube-block",
+  "author": "杨欣武",
+  "version": "3.0.0",
   "description": "A Component Library for Tievd Cube.组件库",
   "main": "lib/cube-block.common.js",
   "files": [
@@ -34,18 +34,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://125.71.201.11:9004/cube/cube-block.git"
+    "url": "https://github.com/xinwu-yang/cube-vue.git"
   },
-  "homepage": "http://125.71.201.11:9004",
+  "homepage": "https://github.com/xinwu-yang/cube-vue/wiki",
   "keywords": [
-    "tievd",
     "cube",
     "vue",
     "components"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "http://125.71.201.11:9004/cube/cube-block/issues"
+    "url": "https://github.com/xinwu-yang/cube-vue/issues"
   },
   "unpkg": "lib/index.js",
   "style": "lib/theme-chalk/index.css",
